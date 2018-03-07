@@ -8,14 +8,14 @@ import (
 )
 
 func main() {
-	fmt.Println(len(os.Args) > 2, os.Args[2])
+	option := ""
 	if len(os.Args) > 2 {
-		option := os.Args[2]
+		option = os.Args[2]
 	} else {
-		option := "default"
+		option = "default"
 	}
 	vars := os.Args[1]
-	switch options {
+	switch option {
 	case "sha384":
 		fmt.Printf("SHA384 of %s is %x", vars, sha512.Sum384([]byte(vars)))
 	case "sha512":
